@@ -34,6 +34,7 @@
 		0FD023C718B12606000F5993 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD023C218B12606000F5993 /* REFrostedViewController.m */; };
 		0FD023C818B12606000F5993 /* UIImage+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD023C418B12606000F5993 /* UIImage+REFrostedViewController.m */; };
 		0FD023C918B12606000F5993 /* UIView+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD023C618B12606000F5993 /* UIView+REFrostedViewController.m */; };
+		0FD023CB18B25305000F5993 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD023CA18B25305000F5993 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		0FD023C418B12606000F5993 /* UIImage+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+REFrostedViewController.m"; sourceTree = "<group>"; };
 		0FD023C518B12606000F5993 /* UIView+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+REFrostedViewController.h"; sourceTree = "<group>"; };
 		0FD023C618B12606000F5993 /* UIView+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+REFrostedViewController.m"; sourceTree = "<group>"; };
+		0FD023CA18B25305000F5993 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		0FD0238918B101A3000F5993 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0FD023CA18B25305000F5993 /* logo.png */,
 				0FD023A318B10E61000F5993 /* title_logo.png */,
 				0FD023A418B10E61000F5993 /* title_logo@2x.png */,
 			);
@@ -353,6 +356,7 @@
 				0FD023AB18B11751000F5993 /* POSViewController.xib in Resources */,
 				0FD0239318B1053B000F5993 /* LoginViewController.xib in Resources */,
 				0FD023A018B10926000F5993 /* LoginTitleHeaderView.xib in Resources */,
+				0FD023CB18B25305000F5993 /* logo.png in Resources */,
 				0FD0239A18B106BC000F5993 /* inputFieldCell.xib in Resources */,
 				0FD023A218B10DF7000F5993 /* LogoView.xib in Resources */,
 				0FD023A518B10E61000F5993 /* title_logo.png in Resources */,

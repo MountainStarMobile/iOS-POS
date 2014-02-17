@@ -27,6 +27,8 @@
 #import "UIImage+REFrostedViewController.h"
 #import "UIView+REFrostedViewController.h"
 
+#define kWidth 300
+
 @interface REFrostedViewController ()
 
 @property (assign, readwrite, nonatomic) CGFloat imageViewWidth;
@@ -68,6 +70,8 @@
 
 - (void)commonInit
 {
+    self.view.frame = CGRectMake(0, 0, 100, 100);
+    
     self.view.clipsToBounds = YES;
     self.view.hidden = NO;
     self.animationDuration = 0.35f;
@@ -81,6 +85,7 @@
         imageView.clipsToBounds = YES;
         imageView;
     });
+
     [self.view addSubview:self.imageView];
     
     self.fadedView = ({
@@ -132,12 +137,13 @@
     self.imageViewWidth = 0;
     self.imageView.image = [[controller.view re_screenshot] re_applyBlurWithRadius:self.blurRadius tintColor:self.blurTintColor saturationDeltaFactor:self.blurSaturationDeltaFactor maskImage:nil];
     self.view.frame = controller.view.bounds;
+    
     [self addToParentViewController:controller callingAppearanceMethods:YES];
     
     self.imageView.frame = CGRectMake(0, 0, 0, self.imageView.image.size.height);
     self.fadedView.frame = CGRectMake(0, 0, self.imageView.image.size.width, self.imageView.image.size.height);
+    self.minimumChildViewWidth = kWidth - self.threshold;
     
-    self.minimumChildViewWidth = self.view.frame.size.width - self.threshold;
     [self updateChildViewLayout];
     [self.view.subviews enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(UIView *view, NSUInteger idx, BOOL *stop) {
         if (![view isEqual:self.imageView] && ![view isEqual:self.fadedView]) {
@@ -189,7 +195,7 @@
     self.visible = NO;
     void (^hideBlock)(void) = ^{
         self.fadedView.alpha = 0;
-        [self updateViewsWithThreshold:self.view.frame.size.width];
+        [self updateViewsWithThreshold:kWidth];
     };
     void (^completionHandlerBlock)(BOOL finished) = ^(BOOL finished) {
         [self removeFromParentViewControllerCallingAppearanceMethods:YES];
@@ -215,7 +221,7 @@
 
 - (void)updateViewsWithThreshold:(CGFloat)threshold
 {
-    CGFloat offset = self.view.frame.size.width - threshold;
+    CGFloat offset = kWidth - threshold;
     
     CGRect frame = self.imageView.frame;
     frame.size.width = offset;
@@ -264,8 +270,8 @@
     if (recognizer.state == UIGestureRecognizerStateChanged) {
         
         CGFloat offset = self.imageViewWidth + point.x;
-        if (offset > self.view.frame.size.width)
-            offset = self.view.frame.size.width;
+        if (offset > kWidth)
+            offset = kWidth;
         
         if (offset < 0)
             return;

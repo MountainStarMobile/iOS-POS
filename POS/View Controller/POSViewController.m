@@ -7,8 +7,11 @@
 //
 
 #import "POSViewController.h"
+#import "MenuTableViewController.h"
 
-@interface POSViewController ()
+@interface POSViewController () <MenuOptionDelegate>
+
+@property (readwrite, nonatomic) MenuTableViewController *menuViewController;
 
 @end
 
@@ -26,7 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.menuViewController = [[MenuTableViewController alloc] init];
+    self.menuViewController.delegate = self;
     [self.view addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognized:)]];
     
     // Do any additional setup after loading the view from its nib.
@@ -38,12 +42,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark -
-#pragma mark Gesture recognizer
+- (void)showMenu
+{
+    [self.menuViewController presentFromViewController:self animated:YES completion:nil];
+}
+
+#pragma mark - Gesture recognizer
 
 - (void)panGestureRecognized:(UIPanGestureRecognizer *)sender
 {
-    
+    [self.menuViewController presentFromViewController:self panGestureRecognizer:sender];
+}
+
+#pragma mark - MenuOptionDelegate
+
+- (void)menu:(MenuTableViewController *)menu didPickWithOption:(PMenuOption)option
+{
+    [self.menuViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

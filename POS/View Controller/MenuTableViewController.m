@@ -28,7 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.tableView = [[UITableView alloc] init]; // Frame will be automatically set
     self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:1.0f];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -70,6 +69,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc
+{
+    _delegate = nil;
+}
+
 #pragma mark -
 #pragma mark UITableView Delegate
 
@@ -107,27 +111,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.section == 0 && indexPath.row == 0)
-    {
 
-    }
-    else if (indexPath.section == 0 && indexPath.row == 1)
-    {
-
-    }
-    else if (indexPath.section == 0 && indexPath.row == 2)
-    {
-
-    }
-    else if (indexPath.section == 0 && indexPath.row == 3)
-    {
-
-    }
-    else
-    {
-
-    }
-
+    [self.delegate menu:self didPickWithOption:indexPath.row];
 }
 
 #pragma mark -
@@ -145,9 +130,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    if (sectionIndex == 0)
-        return 4;
-    return 1;
+    return PMenuOptionCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -162,10 +145,10 @@
     
     if (indexPath.section == 0)
     {
-        NSArray *titles = @[@"模擬測驗", @"我的題庫", @"學習紀錄", @"證照商店"];
-        NSArray *images = @[@"left_simulation", @"left_favorite", @"left_examLog", @"left_licenseStore"];
+        NSArray *titles = @[@"公告", @"開單", @"改單", @"結帳", @"查詢", @"設定"];
+        //NSArray *images = @[@"left_simulation", @"left_favorite", @"left_examLog", @"left_licenseStore", @"", @"",];
         cell.textLabel.text = titles[indexPath.row];
-        [cell.imageView setImage:[UIImage imageNamed:images[indexPath.row]]];
+        //[cell.imageView setImage:[UIImage imageNamed:images[indexPath.row]]];
     }
     
     return cell;

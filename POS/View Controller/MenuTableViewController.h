@@ -9,6 +9,25 @@
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
 
+typedef NS_ENUM(NSInteger, PMenuOption) {
+    PMenuOptionAnnounce = 0,
+    PMenuOptionCreate = 1,
+    PMenuOptionModify = 2,
+    PMenuOptionSubTotal = 3,
+    PMenuOptionQuery = 4,
+    PMenuOptionSetting = 5,
+    PMenuOptionCount = 6,
+};
+
+@class MenuTableViewController;
+@protocol MenuOptionDelegate <NSObject>
+
+- (void)menu:(MenuTableViewController*)menu didPickWithOption:(PMenuOption)option;
+
+@end
+
 @interface MenuTableViewController : REFrostedViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property id <MenuOptionDelegate> delegate;
 
 @end
