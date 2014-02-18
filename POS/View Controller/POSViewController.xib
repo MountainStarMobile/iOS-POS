@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="POSViewController">
             <connections>
+                <outlet property="dateLabel" destination="Ewb-Av-Z9K" id="utb-Au-Jf7"/>
+                <outlet property="nameLabel" destination="W9Y-KL-LMM" id="hfC-JX-4np"/>
+                <outlet property="titleView" destination="Ubx-Cr-92t" id="IeR-yO-8GI"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>

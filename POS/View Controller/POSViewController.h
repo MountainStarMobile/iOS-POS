@@ -10,8 +10,9 @@
 
 @interface POSViewController : UIViewController
 
-@property (nonatomic, strong) UILabel *nameLabel;
-@property (nonatomic, strong) UILabel *dateLabel;
+@property (nonatomic, strong) IBOutlet UIView *titleView;
+@property (nonatomic, strong) IBOutlet UILabel *nameLabel;
+@property (nonatomic, strong) IBOutlet UILabel *dateLabel;
 
 - (void)showMenu;
 
