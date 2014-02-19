@@ -6,12 +6,11 @@
 //  Copyright (c) 2014年 Good-idea Consulgint Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "RootView.h"
 
-@interface CreateView : UIView
+@interface CreateView : RootView
 
+@property (nonatomic, strong) IBOutlet UICollectionView *aCollectionView;
 
-- (void)show;
-- (void)hide;
 
 @end

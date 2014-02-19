@@ -123,6 +123,9 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <connections>
+                <outlet property="aCollectionView" destination="QOE-pe-sx9" id="8ew-4S-UDD"/>
+            </connections>
         </view>
     </objects>
 </document>

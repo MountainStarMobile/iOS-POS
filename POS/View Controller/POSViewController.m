@@ -12,13 +12,16 @@
 #import "AnnouncementView.h"
 #import "AnnounceAdapter.h"
 #import "CreateView.h"
+#import "CreateAdapter.h"
+#import "productCell.h"
 
 @interface POSViewController () <MenuOptionDelegate, AnnounceDelegate>
 
 @property (readwrite, nonatomic) MenuTableViewController *menuViewController;
-@property (strong ,nonatomic) AnnouncementView *announceView;
-@property (strong ,nonatomic) AnnounceAdapter *dataAdapter;
-@property (strong, nonatomic) CreateView *createView;
+@property (nonatomic, strong) AnnouncementView *announceView;
+@property (nonatomic, strong) AnnounceAdapter *dataAdapter;
+@property (nonatomic, strong) CreateView *createView;
+@property (nonatomic, strong) CreateAdapter *createAdapter;
 
 - (void)createAllViews;
 
@@ -74,6 +77,9 @@
 - (void)createAllViews
 {
     CGRect frame = CGRectMake(0, 81, 1024, 768 - 80);
+    /*
+     公告頁面
+     */
     self.announceView = [[[NSBundle mainBundle] loadNibNamed:@"AnnouncementView" owner:self options:nil] objectAtIndex:0];
     self.announceView.frame = frame;
     self.announceView.delegate = self;
@@ -84,10 +90,18 @@
     _announceView.aTableView.delegate = _dataAdapter;
     
     [self.view addSubview:_announceView];
-    
+    /*
+     開單頁面
+     */
     self.createView = [[[NSBundle mainBundle] loadNibNamed:@"CreateView" owner:self options:nil] objectAtIndex:0];
     self.createView.alpha = 0;
     self.createView.frame = frame;
+    [_createView.aCollectionView registerNib:[UINib nibWithNibName:@"productCell" bundle:nil] forCellWithReuseIdentifier:createCellIdentifier];
+    self.createAdapter = [[CreateAdapter alloc] init];
+    _createView.aCollectionView.delegate = _createAdapter;
+    _createView.aCollectionView.dataSource = _createAdapter;
+    _createView.aCollectionView.backgroundColor = [UIColor clearColor];
+    
     [self.view addSubview:_createView];
     
     

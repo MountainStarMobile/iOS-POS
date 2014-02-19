@@ -6,17 +6,14 @@
 //  Copyright (c) 2014年 Good-idea Consulgint Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "RootView.h"
 
 @protocol AnnounceDelegate <NSObject>
 
 @end
-@interface AnnouncementView : UIView
+@interface AnnouncementView : RootView
 
 @property (nonatomic, strong) id <AnnounceDelegate> delegate;
 @property (nonatomic, strong) IBOutlet UITableView *aTableView;
-
-- (void)show;
-- (void)hide;
 
 @end

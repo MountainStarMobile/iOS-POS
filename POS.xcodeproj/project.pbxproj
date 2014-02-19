@@ -41,6 +41,11 @@
 		0FD023DC18B39B5F000F5993 /* AnnounceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD023DB18B39B5F000F5993 /* AnnounceItem.m */; };
 		0FD023DF18B3AF59000F5993 /* CreateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD023DE18B3AF59000F5993 /* CreateView.m */; };
 		0FD023E118B3AF65000F5993 /* CreateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD023E018B3AF65000F5993 /* CreateView.xib */; };
+		7C4B0D4118B470B2001C981B /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4018B470B2001C981B /* RootView.m */; };
+		7C4B0D4418B473C0001C981B /* CreateAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4318B473C0001C981B /* CreateAdapter.m */; };
+		7C4B0D4718B49464001C981B /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4618B49464001C981B /* ProductItem.m */; };
+		7C4B0D4B18B497C0001C981B /* productCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4A18B497C0001C981B /* productCell.m */; };
+		7C4B0D4D18B497CD001C981B /* productCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4C18B497CD001C981B /* productCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +109,15 @@
 		0FD023DD18B3AF59000F5993 /* CreateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateView.h; sourceTree = "<group>"; };
 		0FD023DE18B3AF59000F5993 /* CreateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateView.m; sourceTree = "<group>"; };
 		0FD023E018B3AF65000F5993 /* CreateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateView.xib; sourceTree = "<group>"; };
+		7C4B0D3F18B470B2001C981B /* RootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
+		7C4B0D4018B470B2001C981B /* RootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootView.m; sourceTree = "<group>"; };
+		7C4B0D4218B473C0001C981B /* CreateAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAdapter.h; sourceTree = "<group>"; };
+		7C4B0D4318B473C0001C981B /* CreateAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAdapter.m; sourceTree = "<group>"; };
+		7C4B0D4518B49464001C981B /* ProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductItem.h; sourceTree = "<group>"; };
+		7C4B0D4618B49464001C981B /* ProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductItem.m; sourceTree = "<group>"; };
+		7C4B0D4918B497C0001C981B /* productCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = productCell.h; sourceTree = "<group>"; };
+		7C4B0D4A18B497C0001C981B /* productCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = productCell.m; sourceTree = "<group>"; };
+		7C4B0D4C18B497CD001C981B /* productCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = productCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +266,9 @@
 				0FD0239618B106BC000F5993 /* inputFieldCell.h */,
 				0FD0239718B106BC000F5993 /* inputFieldCell.m */,
 				0FD0239818B106BC000F5993 /* inputFieldCell.xib */,
+				7C4B0D4918B497C0001C981B /* productCell.h */,
+				7C4B0D4A18B497C0001C981B /* productCell.m */,
+				7C4B0D4C18B497CD001C981B /* productCell.xib */,
 			);
 			path = "custom cell";
 			sourceTree = "<group>";
@@ -264,6 +281,8 @@
 				0FD0239C18B10906000F5993 /* LoginTitleHeaderView.h */,
 				0FD0239D18B10906000F5993 /* LoginTitleHeaderView.m */,
 				0FD0239F18B10926000F5993 /* LoginTitleHeaderView.xib */,
+				7C4B0D3F18B470B2001C981B /* RootView.h */,
+				7C4B0D4018B470B2001C981B /* RootView.m */,
 				0FD023CD18B39955000F5993 /* AnnouncementView.h */,
 				0FD023CE18B39955000F5993 /* AnnouncementView.m */,
 				0FD023D018B39978000F5993 /* AnnouncementView.xib */,
@@ -301,6 +320,8 @@
 			children = (
 				0FD023D318B39A50000F5993 /* AnnounceAdapter.h */,
 				0FD023D418B39A50000F5993 /* AnnounceAdapter.m */,
+				7C4B0D4218B473C0001C981B /* CreateAdapter.h */,
+				7C4B0D4318B473C0001C981B /* CreateAdapter.m */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -310,6 +331,8 @@
 			children = (
 				0FD023DA18B39B5F000F5993 /* AnnounceItem.h */,
 				0FD023DB18B39B5F000F5993 /* AnnounceItem.m */,
+				7C4B0D4518B49464001C981B /* ProductItem.h */,
+				7C4B0D4618B49464001C981B /* ProductItem.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -404,6 +427,7 @@
 				0FD0239A18B106BC000F5993 /* inputFieldCell.xib in Resources */,
 				0FD023A218B10DF7000F5993 /* LogoView.xib in Resources */,
 				0FD023A518B10E61000F5993 /* title_logo.png in Resources */,
+				7C4B0D4D18B497CD001C981B /* productCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,9 +450,12 @@
 				0FD023C718B12606000F5993 /* REFrostedViewController.m in Sources */,
 				0FD023DF18B3AF59000F5993 /* CreateView.m in Sources */,
 				0FD023C918B12606000F5993 /* UIView+REFrostedViewController.m in Sources */,
+				7C4B0D4718B49464001C981B /* ProductItem.m in Sources */,
+				7C4B0D4118B470B2001C981B /* RootView.m in Sources */,
 				0FD023DC18B39B5F000F5993 /* AnnounceItem.m in Sources */,
 				0FD0236218B10053000F5993 /* main.m in Sources */,
 				0FD0239E18B10906000F5993 /* LoginTitleHeaderView.m in Sources */,
+				7C4B0D4B18B497C0001C981B /* productCell.m in Sources */,
 				0FD023C818B12606000F5993 /* UIImage+REFrostedViewController.m in Sources */,
 				0FD023CF18B39955000F5993 /* AnnouncementView.m in Sources */,
 				0FD023AA18B11751000F5993 /* POSViewController.m in Sources */,
@@ -436,6 +463,7 @@
 				0FD0239218B1053B000F5993 /* LoginViewController.m in Sources */,
 				0FD023BF18B11ED0000F5993 /* MenuTableViewController.m in Sources */,
 				0FD0239918B106BC000F5993 /* inputFieldCell.m in Sources */,
+				7C4B0D4418B473C0001C981B /* CreateAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
