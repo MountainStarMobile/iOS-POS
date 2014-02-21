@@ -53,6 +53,10 @@
 		7C4B0D6618B73FA9001C981B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5D18B73FA9001C981B /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7C4B0D6718B73FA9001C981B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5F18B73FA9001C981B /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7C4B0D6818B73FA9001C981B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D6218B73FA9001C981B /* Toast+UIView.m */; };
+		7C4B0D6C18B742BB001C981B /* DatabaseConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D6B18B742BB001C981B /* DatabaseConnections.m */; };
+		7C4B0D7018B74B7D001C981B /* PathAndDirectoryFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D6F18B74B7D001C981B /* PathAndDirectoryFunction.m */; };
+		7C4B0D7318B74E56001C981B /* CustomerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D7218B74E56001C981B /* CustomerInfo.m */; };
+		7C4B0D7618B74EF4001C981B /* TradeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D7518B74EF4001C981B /* TradeInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +143,14 @@
 		7C4B0D5F18B73FA9001C981B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		7C4B0D6118B73FA9001C981B /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
 		7C4B0D6218B73FA9001C981B /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
+		7C4B0D6A18B742BB001C981B /* DatabaseConnections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseConnections.h; sourceTree = "<group>"; };
+		7C4B0D6B18B742BB001C981B /* DatabaseConnections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseConnections.m; sourceTree = "<group>"; };
+		7C4B0D6E18B74B7D001C981B /* PathAndDirectoryFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathAndDirectoryFunction.h; sourceTree = "<group>"; };
+		7C4B0D6F18B74B7D001C981B /* PathAndDirectoryFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathAndDirectoryFunction.m; sourceTree = "<group>"; };
+		7C4B0D7118B74E56001C981B /* CustomerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerInfo.h; sourceTree = "<group>"; };
+		7C4B0D7218B74E56001C981B /* CustomerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerInfo.m; sourceTree = "<group>"; };
+		7C4B0D7418B74EF4001C981B /* TradeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeInfo.h; sourceTree = "<group>"; };
+		7C4B0D7518B74EF4001C981B /* TradeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +218,7 @@
 				0FD0239B18B108BB000F5993 /* custom view */,
 				0FD0239518B106BC000F5993 /* custom cell */,
 				0FD023D618B39AF0000F5993 /* model */,
+				7C4B0D6918B742A4001C981B /* Shared instance */,
 				0FD0238818B101A3000F5993 /* External */,
 				0FD0238918B101A3000F5993 /* Images */,
 				0FD0238A18B101A3000F5993 /* Resources */,
@@ -358,6 +371,10 @@
 				7C4B0D4618B49464001C981B /* ProductItem.m */,
 				7C4B0D5218B6FDCD001C981B /* AccountItem.h */,
 				7C4B0D5318B6FDCD001C981B /* AccountItem.m */,
+				7C4B0D7118B74E56001C981B /* CustomerInfo.h */,
+				7C4B0D7218B74E56001C981B /* CustomerInfo.m */,
+				7C4B0D7418B74EF4001C981B /* TradeInfo.h */,
+				7C4B0D7518B74EF4001C981B /* TradeInfo.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -386,6 +403,17 @@
 				7C4B0D6218B73FA9001C981B /* Toast+UIView.m */,
 			);
 			path = Toast;
+			sourceTree = "<group>";
+		};
+		7C4B0D6918B742A4001C981B /* Shared instance */ = {
+			isa = PBXGroup;
+			children = (
+				7C4B0D6E18B74B7D001C981B /* PathAndDirectoryFunction.h */,
+				7C4B0D6F18B74B7D001C981B /* PathAndDirectoryFunction.m */,
+				7C4B0D6A18B742BB001C981B /* DatabaseConnections.h */,
+				7C4B0D6B18B742BB001C981B /* DatabaseConnections.m */,
+			);
+			path = "Shared instance";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4B0D7618B74EF4001C981B /* TradeInfo.m in Sources */,
 				0FD0236618B10053000F5993 /* AppDelegate.m in Sources */,
 				7C4B0D6818B73FA9001C981B /* Toast+UIView.m in Sources */,
 				0FD023C718B12606000F5993 /* REFrostedViewController.m in Sources */,
@@ -512,7 +541,10 @@
 				0FD0236218B10053000F5993 /* main.m in Sources */,
 				0FD0239E18B10906000F5993 /* LoginTitleHeaderView.m in Sources */,
 				7C4B0D6618B73FA9001C981B /* FMDatabaseQueue.m in Sources */,
+				7C4B0D7318B74E56001C981B /* CustomerInfo.m in Sources */,
 				7C4B0D4B18B497C0001C981B /* productCell.m in Sources */,
+				7C4B0D7018B74B7D001C981B /* PathAndDirectoryFunction.m in Sources */,
+				7C4B0D6C18B742BB001C981B /* DatabaseConnections.m in Sources */,
 				7C4B0D5418B6FDCD001C981B /* AccountItem.m in Sources */,
 				0FD023C818B12606000F5993 /* UIImage+REFrostedViewController.m in Sources */,
 				0FD023CF18B39955000F5993 /* AnnouncementView.m in Sources */,

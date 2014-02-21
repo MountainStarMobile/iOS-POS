@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSNumber *Id;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *comment;
+@property (nonatomic, strong) NSString *url;
 
 @end
