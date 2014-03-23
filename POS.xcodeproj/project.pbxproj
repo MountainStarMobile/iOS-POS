@@ -59,17 +59,6 @@
 		7C4B0D4718B49464001C981B /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4618B49464001C981B /* ProductItem.m */; };
 		7C4B0D4B18B497C0001C981B /* productCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4A18B497C0001C981B /* productCell.m */; };
 		7C4B0D4D18B497CD001C981B /* productCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4C18B497CD001C981B /* productCell.xib */; };
-		7C4B0D5418B6FDCD001C981B /* AccountItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5318B6FDCD001C981B /* AccountItem.m */; };
-		7C4B0D6318B73FA9001C981B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5718B73FA9001C981B /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C4B0D6418B73FA9001C981B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5918B73FA9001C981B /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C4B0D6518B73FA9001C981B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5B18B73FA9001C981B /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C4B0D6618B73FA9001C981B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5D18B73FA9001C981B /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C4B0D6718B73FA9001C981B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5F18B73FA9001C981B /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C4B0D6818B73FA9001C981B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D6218B73FA9001C981B /* Toast+UIView.m */; };
-		7C4B0D6C18B742BB001C981B /* DatabaseConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D6B18B742BB001C981B /* DatabaseConnections.m */; };
-		7C4B0D7018B74B7D001C981B /* PathAndDirectoryFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D6F18B74B7D001C981B /* PathAndDirectoryFunction.m */; };
-		7C4B0D7318B74E56001C981B /* CustomerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D7218B74E56001C981B /* CustomerInfo.m */; };
-		7C4B0D7618B74EF4001C981B /* TradeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D7518B74EF4001C981B /* TradeInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,28 +153,6 @@
 		7C4B0D4918B497C0001C981B /* productCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = productCell.h; sourceTree = "<group>"; };
 		7C4B0D4A18B497C0001C981B /* productCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = productCell.m; sourceTree = "<group>"; };
 		7C4B0D4C18B497CD001C981B /* productCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = productCell.xib; sourceTree = "<group>"; };
-		7C4B0D5218B6FDCD001C981B /* AccountItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountItem.h; sourceTree = "<group>"; };
-		7C4B0D5318B6FDCD001C981B /* AccountItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountItem.m; sourceTree = "<group>"; };
-		7C4B0D5618B73FA9001C981B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		7C4B0D5718B73FA9001C981B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		7C4B0D5818B73FA9001C981B /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		7C4B0D5918B73FA9001C981B /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		7C4B0D5A18B73FA9001C981B /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		7C4B0D5B18B73FA9001C981B /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		7C4B0D5C18B73FA9001C981B /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		7C4B0D5D18B73FA9001C981B /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		7C4B0D5E18B73FA9001C981B /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		7C4B0D5F18B73FA9001C981B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		7C4B0D6118B73FA9001C981B /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
-		7C4B0D6218B73FA9001C981B /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
-		7C4B0D6A18B742BB001C981B /* DatabaseConnections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseConnections.h; sourceTree = "<group>"; };
-		7C4B0D6B18B742BB001C981B /* DatabaseConnections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseConnections.m; sourceTree = "<group>"; };
-		7C4B0D6E18B74B7D001C981B /* PathAndDirectoryFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathAndDirectoryFunction.h; sourceTree = "<group>"; };
-		7C4B0D6F18B74B7D001C981B /* PathAndDirectoryFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathAndDirectoryFunction.m; sourceTree = "<group>"; };
-		7C4B0D7118B74E56001C981B /* CustomerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerInfo.h; sourceTree = "<group>"; };
-		7C4B0D7218B74E56001C981B /* CustomerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerInfo.m; sourceTree = "<group>"; };
-		7C4B0D7418B74EF4001C981B /* TradeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeInfo.h; sourceTree = "<group>"; };
-		7C4B0D7518B74EF4001C981B /* TradeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +220,6 @@
 				0FD0239B18B108BB000F5993 /* custom view */,
 				0FD0239518B106BC000F5993 /* custom cell */,
 				0FD023D618B39AF0000F5993 /* model */,
-				7C4B0D6918B742A4001C981B /* Shared instance */,
 				0FD0238818B101A3000F5993 /* External */,
 				0FD0238918B101A3000F5993 /* Images */,
 				0FD0238A18B101A3000F5993 /* Resources */,
@@ -293,8 +259,6 @@
 		0FD0238818B101A3000F5993 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				7C4B0D5518B73FA9001C981B /* fmdb */,
-				7C4B0D6018B73FA9001C981B /* Toast */,
 				0FD023C018B12606000F5993 /* REFrostedViewController */,
 			);
 			path = External;
@@ -412,7 +376,6 @@
 				0FD023DB18B39B5F000F5993 /* AnnounceItem.m */,
 				7C4B0D4518B49464001C981B /* ProductItem.h */,
 				7C4B0D4618B49464001C981B /* ProductItem.m */,
-<<<<<<< HEAD
 				0F82ED1C18DEBE1600839CFE /* bulletin.h */,
 				0F82ED1D18DEBE1600839CFE /* bulletin.m */,
 				0F82ED2518DEBFD600839CFE /* category.h */,
@@ -427,53 +390,8 @@
 				0F82ED2918DEC06200839CFE /* customer.m */,
 				0F82ED2E18DEC17600839CFE /* staff.h */,
 				0F82ED2F18DEC17600839CFE /* staff.m */,
-=======
-				7C4B0D5218B6FDCD001C981B /* AccountItem.h */,
-				7C4B0D5318B6FDCD001C981B /* AccountItem.m */,
-				7C4B0D7118B74E56001C981B /* CustomerInfo.h */,
-				7C4B0D7218B74E56001C981B /* CustomerInfo.m */,
-				7C4B0D7418B74EF4001C981B /* TradeInfo.h */,
-				7C4B0D7518B74EF4001C981B /* TradeInfo.m */,
->>>>>>> FETCH_HEAD
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		7C4B0D5518B73FA9001C981B /* fmdb */ = {
-			isa = PBXGroup;
-			children = (
-				7C4B0D5618B73FA9001C981B /* FMDatabase.h */,
-				7C4B0D5718B73FA9001C981B /* FMDatabase.m */,
-				7C4B0D5818B73FA9001C981B /* FMDatabaseAdditions.h */,
-				7C4B0D5918B73FA9001C981B /* FMDatabaseAdditions.m */,
-				7C4B0D5A18B73FA9001C981B /* FMDatabasePool.h */,
-				7C4B0D5B18B73FA9001C981B /* FMDatabasePool.m */,
-				7C4B0D5C18B73FA9001C981B /* FMDatabaseQueue.h */,
-				7C4B0D5D18B73FA9001C981B /* FMDatabaseQueue.m */,
-				7C4B0D5E18B73FA9001C981B /* FMResultSet.h */,
-				7C4B0D5F18B73FA9001C981B /* FMResultSet.m */,
-			);
-			path = fmdb;
-			sourceTree = "<group>";
-		};
-		7C4B0D6018B73FA9001C981B /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				7C4B0D6118B73FA9001C981B /* Toast+UIView.h */,
-				7C4B0D6218B73FA9001C981B /* Toast+UIView.m */,
-			);
-			path = Toast;
-			sourceTree = "<group>";
-		};
-		7C4B0D6918B742A4001C981B /* Shared instance */ = {
-			isa = PBXGroup;
-			children = (
-				7C4B0D6E18B74B7D001C981B /* PathAndDirectoryFunction.h */,
-				7C4B0D6F18B74B7D001C981B /* PathAndDirectoryFunction.m */,
-				7C4B0D6A18B742BB001C981B /* DatabaseConnections.h */,
-				7C4B0D6B18B742BB001C981B /* DatabaseConnections.m */,
-			);
-			path = "Shared instance";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,44 +507,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				0F82ED2118DEBEAF00839CFE /* bill.m in Sources */,
 				0F82ED4718DEC91100839CFE /* PurchaseAdapter.m in Sources */,
-=======
-				7C4B0D7618B74EF4001C981B /* TradeInfo.m in Sources */,
->>>>>>> FETCH_HEAD
 				0FD0236618B10053000F5993 /* AppDelegate.m in Sources */,
-				7C4B0D6818B73FA9001C981B /* Toast+UIView.m in Sources */,
 				0FD023C718B12606000F5993 /* REFrostedViewController.m in Sources */,
 				0FD023DF18B3AF59000F5993 /* CreateView.m in Sources */,
-				7C4B0D6318B73FA9001C981B /* FMDatabase.m in Sources */,
 				0FD023C918B12606000F5993 /* UIView+REFrostedViewController.m in Sources */,
-<<<<<<< HEAD
 				0F82ED2D18DEC0D400839CFE /* product.m in Sources */,
 				0F82ED3018DEC17600839CFE /* staff.m in Sources */,
-=======
-				7C4B0D6518B73FA9001C981B /* FMDatabasePool.m in Sources */,
-				7C4B0D6718B73FA9001C981B /* FMResultSet.m in Sources */,
-				7C4B0D6418B73FA9001C981B /* FMDatabaseAdditions.m in Sources */,
->>>>>>> FETCH_HEAD
 				7C4B0D4718B49464001C981B /* ProductItem.m in Sources */,
 				7C4B0D4118B470B2001C981B /* RootView.m in Sources */,
 				0F82ED1E18DEBE1600839CFE /* bulletin.m in Sources */,
 				0FD023DC18B39B5F000F5993 /* AnnounceItem.m in Sources */,
 				0FD0236218B10053000F5993 /* main.m in Sources */,
 				0FD0239E18B10906000F5993 /* LoginTitleHeaderView.m in Sources */,
-<<<<<<< HEAD
 				0F82ED2A18DEC06200839CFE /* customer.m in Sources */,
 				0F82ED4418DEC89400839CFE /* ProductAdapter.m in Sources */,
 				0F82ED4B18DECD3000839CFE /* PurchaseCell.m in Sources */,
-=======
-				7C4B0D6618B73FA9001C981B /* FMDatabaseQueue.m in Sources */,
-				7C4B0D7318B74E56001C981B /* CustomerInfo.m in Sources */,
->>>>>>> FETCH_HEAD
 				7C4B0D4B18B497C0001C981B /* productCell.m in Sources */,
-				7C4B0D7018B74B7D001C981B /* PathAndDirectoryFunction.m in Sources */,
-				7C4B0D6C18B742BB001C981B /* DatabaseConnections.m in Sources */,
-				7C4B0D5418B6FDCD001C981B /* AccountItem.m in Sources */,
 				0FD023C818B12606000F5993 /* UIImage+REFrostedViewController.m in Sources */,
 				0FD023CF18B39955000F5993 /* AnnouncementView.m in Sources */,
 				0FD023AA18B11751000F5993 /* POSViewController.m in Sources */,

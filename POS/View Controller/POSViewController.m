@@ -117,15 +117,9 @@
     
     [self.view addSubview:_createView];
     
-<<<<<<< HEAD
     
     
     
-=======
-    /*
-     將公告頁面移至最上層
-     */
->>>>>>> FETCH_HEAD
     [self.view bringSubviewToFront:_announceView];
 }
 
@@ -138,20 +132,18 @@
 
 #pragma mark - MenuOptionDelegate
 
-- (void)menu:(MenuTableViewController *)menu didPickWithOption:(PMenuOption)option contentView:(RootView *)view
+- (void)menu:(MenuTableViewController *)menu didPickWithOption:(PMenuOption)option
 {
     switch (option)
     {
         case PMenuOptionAnnounce:
-            [view hide];
-            
             [self.view bringSubviewToFront:_announceView];
+            [_createView hide];
             [_announceView performSelector:@selector(show) withObject:nil afterDelay:0.5];
             break;
         case PMenuOptionCreate:
-            [view hide];
-            
             [self.view bringSubviewToFront:_createView];
+            [_announceView hide];
             [_createView performSelector:@selector(show) withObject:nil afterDelay:0.5];
             break;
         default:
