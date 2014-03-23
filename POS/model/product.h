@@ -19,7 +19,7 @@
 @property (nonatomic, strong) NSString *priceQual;
 @property (nonatomic, strong) NSString *productUnit;
 @property (nonatomic, strong) NSNumber *quantityLimit;
-@property (nonatomic, strong) NSString *sort;
+@property (nonatomic, strong) NSNumber *sort;
 @property (nonatomic, strong) NSString *remarks;
 @property (nonatomic, strong) NSString *status;
 @property (nonatomic, strong) NSString *createUser;

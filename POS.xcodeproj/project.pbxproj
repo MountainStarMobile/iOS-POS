@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F56C74A18DF233800CD2B43 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C74118DF233800CD2B43 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0F56C74B18DF233800CD2B43 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C74318DF233800CD2B43 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0F56C74C18DF233800CD2B43 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C74518DF233800CD2B43 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0F56C74D18DF233800CD2B43 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C74718DF233800CD2B43 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0F56C74E18DF233800CD2B43 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C74918DF233800CD2B43 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0F56C75618DF245C00CD2B43 /* DatabaseConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C75118DF245C00CD2B43 /* DatabaseConnection.m */; };
+		0F56C75718DF245C00CD2B43 /* DateFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C75318DF245C00CD2B43 /* DateFunction.m */; };
+		0F56C75818DF245C00CD2B43 /* MathFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C75518DF245C00CD2B43 /* MathFunction.m */; };
+		0F56C75B18DF257000CD2B43 /* PathAndDirectoryFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C75A18DF257000CD2B43 /* PathAndDirectoryFunction.m */; };
+		0F56C75E18DF259400CD2B43 /* pos.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0F56C75D18DF259400CD2B43 /* pos.sqlite */; };
+		0F56C76118DF25F400CD2B43 /* DatabaseAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C76018DF25F400CD2B43 /* DatabaseAccess.m */; };
 		0F82ED1E18DEBE1600839CFE /* bulletin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F82ED1D18DEBE1600839CFE /* bulletin.m */; };
 		0F82ED2118DEBEAF00839CFE /* bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F82ED2018DEBEAF00839CFE /* bill.m */; };
 		0F82ED2418DEBF5A00839CFE /* billDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F82ED2318DEBF5A00839CFE /* billDetail.m */; };
@@ -72,6 +83,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F56C74018DF233800CD2B43 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		0F56C74118DF233800CD2B43 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		0F56C74218DF233800CD2B43 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		0F56C74318DF233800CD2B43 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		0F56C74418DF233800CD2B43 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		0F56C74518DF233800CD2B43 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		0F56C74618DF233800CD2B43 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		0F56C74718DF233800CD2B43 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		0F56C74818DF233800CD2B43 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		0F56C74918DF233800CD2B43 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		0F56C75018DF245C00CD2B43 /* DatabaseConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseConnection.h; sourceTree = "<group>"; };
+		0F56C75118DF245C00CD2B43 /* DatabaseConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseConnection.m; sourceTree = "<group>"; };
+		0F56C75218DF245C00CD2B43 /* DateFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFunction.h; sourceTree = "<group>"; };
+		0F56C75318DF245C00CD2B43 /* DateFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFunction.m; sourceTree = "<group>"; };
+		0F56C75418DF245C00CD2B43 /* MathFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathFunction.h; sourceTree = "<group>"; };
+		0F56C75518DF245C00CD2B43 /* MathFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathFunction.m; sourceTree = "<group>"; };
+		0F56C75918DF257000CD2B43 /* PathAndDirectoryFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathAndDirectoryFunction.h; sourceTree = "<group>"; };
+		0F56C75A18DF257000CD2B43 /* PathAndDirectoryFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathAndDirectoryFunction.m; sourceTree = "<group>"; };
+		0F56C75D18DF259400CD2B43 /* pos.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = pos.sqlite; sourceTree = "<group>"; };
+		0F56C75F18DF25F400CD2B43 /* DatabaseAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseAccess.h; sourceTree = "<group>"; };
+		0F56C76018DF25F400CD2B43 /* DatabaseAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseAccess.m; sourceTree = "<group>"; };
 		0F82ED1C18DEBE1600839CFE /* bulletin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bulletin.h; sourceTree = "<group>"; };
 		0F82ED1D18DEBE1600839CFE /* bulletin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bulletin.m; sourceTree = "<group>"; };
 		0F82ED1F18DEBEAF00839CFE /* bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bill.h; sourceTree = "<group>"; };
@@ -179,6 +211,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F56C73F18DF233800CD2B43 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				0F56C74018DF233800CD2B43 /* FMDatabase.h */,
+				0F56C74118DF233800CD2B43 /* FMDatabase.m */,
+				0F56C74218DF233800CD2B43 /* FMDatabaseAdditions.h */,
+				0F56C74318DF233800CD2B43 /* FMDatabaseAdditions.m */,
+				0F56C74418DF233800CD2B43 /* FMDatabasePool.h */,
+				0F56C74518DF233800CD2B43 /* FMDatabasePool.m */,
+				0F56C74618DF233800CD2B43 /* FMDatabaseQueue.h */,
+				0F56C74718DF233800CD2B43 /* FMDatabaseQueue.m */,
+				0F56C74818DF233800CD2B43 /* FMResultSet.h */,
+				0F56C74918DF233800CD2B43 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		0F56C74F18DF245C00CD2B43 /* share function */ = {
+			isa = PBXGroup;
+			children = (
+				0F56C75918DF257000CD2B43 /* PathAndDirectoryFunction.h */,
+				0F56C75A18DF257000CD2B43 /* PathAndDirectoryFunction.m */,
+				0F56C75018DF245C00CD2B43 /* DatabaseConnection.h */,
+				0F56C75118DF245C00CD2B43 /* DatabaseConnection.m */,
+				0F56C75218DF245C00CD2B43 /* DateFunction.h */,
+				0F56C75318DF245C00CD2B43 /* DateFunction.m */,
+				0F56C75418DF245C00CD2B43 /* MathFunction.h */,
+				0F56C75518DF245C00CD2B43 /* MathFunction.m */,
+				0F56C75F18DF25F400CD2B43 /* DatabaseAccess.h */,
+				0F56C76018DF25F400CD2B43 /* DatabaseAccess.m */,
+			);
+			path = "share function";
+			sourceTree = "<group>";
+		};
+		0F56C75C18DF259400CD2B43 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				0F56C75D18DF259400CD2B43 /* pos.sqlite */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		0FD0234918B10053000F5993 = {
 			isa = PBXGroup;
 			children = (
@@ -219,8 +293,10 @@
 				0FD0238E18B102CF000F5993 /* View Controller */,
 				0FD0239B18B108BB000F5993 /* custom view */,
 				0FD0239518B106BC000F5993 /* custom cell */,
+				0F56C74F18DF245C00CD2B43 /* share function */,
 				0FD023D618B39AF0000F5993 /* model */,
 				0FD0238818B101A3000F5993 /* External */,
+				0F56C75C18DF259400CD2B43 /* data */,
 				0FD0238918B101A3000F5993 /* Images */,
 				0FD0238A18B101A3000F5993 /* Resources */,
 			);
@@ -259,6 +335,7 @@
 		0FD0238818B101A3000F5993 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				0F56C73F18DF233800CD2B43 /* fmdb */,
 				0FD023C018B12606000F5993 /* REFrostedViewController */,
 			);
 			path = External;
@@ -480,6 +557,7 @@
 				0FD023D118B39978000F5993 /* AnnouncementView.xib in Resources */,
 				0FD023E118B3AF65000F5993 /* CreateView.xib in Resources */,
 				0FD023A018B10926000F5993 /* LoginTitleHeaderView.xib in Resources */,
+				0F56C75E18DF259400CD2B43 /* pos.sqlite in Resources */,
 				0F82ED4C18DECD3000839CFE /* PurchaseCell.xib in Resources */,
 				0F82ED3D18DEC45E00839CFE /* navigate-left-icon.png in Resources */,
 				0F82ED3A18DEC34F00839CFE /* combobox@2x.png in Resources */,
@@ -507,16 +585,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F56C76118DF25F400CD2B43 /* DatabaseAccess.m in Sources */,
+				0F56C75618DF245C00CD2B43 /* DatabaseConnection.m in Sources */,
+				0F56C75818DF245C00CD2B43 /* MathFunction.m in Sources */,
 				0F82ED2118DEBEAF00839CFE /* bill.m in Sources */,
 				0F82ED4718DEC91100839CFE /* PurchaseAdapter.m in Sources */,
+				0F56C75718DF245C00CD2B43 /* DateFunction.m in Sources */,
 				0FD0236618B10053000F5993 /* AppDelegate.m in Sources */,
+				0F56C74A18DF233800CD2B43 /* FMDatabase.m in Sources */,
 				0FD023C718B12606000F5993 /* REFrostedViewController.m in Sources */,
 				0FD023DF18B3AF59000F5993 /* CreateView.m in Sources */,
+				0F56C74E18DF233800CD2B43 /* FMResultSet.m in Sources */,
 				0FD023C918B12606000F5993 /* UIView+REFrostedViewController.m in Sources */,
+				0F56C74C18DF233800CD2B43 /* FMDatabasePool.m in Sources */,
 				0F82ED2D18DEC0D400839CFE /* product.m in Sources */,
 				0F82ED3018DEC17600839CFE /* staff.m in Sources */,
 				7C4B0D4718B49464001C981B /* ProductItem.m in Sources */,
 				7C4B0D4118B470B2001C981B /* RootView.m in Sources */,
+				0F56C75B18DF257000CD2B43 /* PathAndDirectoryFunction.m in Sources */,
 				0F82ED1E18DEBE1600839CFE /* bulletin.m in Sources */,
 				0FD023DC18B39B5F000F5993 /* AnnounceItem.m in Sources */,
 				0FD0236218B10053000F5993 /* main.m in Sources */,
@@ -527,10 +613,12 @@
 				7C4B0D4B18B497C0001C981B /* productCell.m in Sources */,
 				0FD023C818B12606000F5993 /* UIImage+REFrostedViewController.m in Sources */,
 				0FD023CF18B39955000F5993 /* AnnouncementView.m in Sources */,
+				0F56C74B18DF233800CD2B43 /* FMDatabaseAdditions.m in Sources */,
 				0FD023AA18B11751000F5993 /* POSViewController.m in Sources */,
 				0F82ED2418DEBF5A00839CFE /* billDetail.m in Sources */,
 				0FD023D518B39A50000F5993 /* AnnounceAdapter.m in Sources */,
 				0FD0239218B1053B000F5993 /* LoginViewController.m in Sources */,
+				0F56C74D18DF233800CD2B43 /* FMDatabaseQueue.m in Sources */,
 				0FD023BF18B11ED0000F5993 /* MenuTableViewController.m in Sources */,
 				0F82ED2718DEBFD600839CFE /* category.m in Sources */,
 				0FD0239918B106BC000F5993 /* inputFieldCell.m in Sources */,
