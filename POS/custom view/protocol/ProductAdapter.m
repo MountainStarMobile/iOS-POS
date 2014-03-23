@@ -1,16 +1,16 @@
 //
-//  CreateAdapter.m
+//  ProductAdapter.m
 //  POS
 //
-//  Created by Leo Chang on 2/19/14.
-//  Copyright (c) 2014 Good-idea Consulgint Inc. All rights reserved.
+//  Created by leo.chang on 2014/3/23.
+//  Copyright (c) 2014年 Good-idea Consulgint Inc. All rights reserved.
 //
 
-#import "CreateAdapter.h"
-#import "ProductItem.h"
+#import "ProductAdapter.h"
 #import "productCell.h"
+#import "ProductItem.h"
 
-@implementation CreateAdapter
+@implementation ProductAdapter
 
 - (id)init
 {
@@ -34,7 +34,7 @@
     
     ProductItem *item = _items[indexPath.row];
     
-    [cell.nameLabel setText:item.name];
+    [cell.nameLabel setText:[NSString stringWithFormat:@"[%@]%@", _category, item.name ]];
     
     return cell;
 }
@@ -42,7 +42,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(150, 150);
-        
+    
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
