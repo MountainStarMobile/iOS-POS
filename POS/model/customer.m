@@ -10,4 +10,14 @@
 
 @implementation customer
 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        self.syncStatus = [NSNumber numberWithInteger:syncStatusNeed];
+    }
+    return self;
+}
+
 @end

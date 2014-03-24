@@ -13,7 +13,8 @@
 - (void)switchCategory:(NSString*)category;
 
 @end
-@interface CreateView : RootView
+
+@interface CreateView : RootView <UITextFieldDelegate>
 
 @property (weak) id <CreateViewDelegate> delegate;
 
@@ -21,6 +22,21 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *aTableView;
 
+@property (nonatomic, strong) IBOutlet UIButton *staffButton;
+@property (nonatomic, strong) IBOutlet UITextField *nameField;
+@property (nonatomic, strong) IBOutlet UITextField *telField;
+@property (nonatomic, strong) IBOutlet UIButton *birthButton;
+@property (nonatomic, strong) IBOutlet UILabel *productLabel;
+@property (nonatomic, strong) IBOutlet UITextField *unitField;
+@property (nonatomic, strong) IBOutlet UILabel *subTotal;
+
+@property (nonatomic, strong) NSString *customerName;
+@property (nonatomic, strong) NSString *customerTelephone;
+@property (nonatomic, strong) NSString *units;
+
 - (IBAction)chooseCategoryButtonPress:(UIButton*)sender;
+
+- (IBAction)chooseStaffButtonPress:(UIButton*)sender;
+- (IBAction)chooseBirthdayButtonPress:(UIButton*)sender;
 
 @end

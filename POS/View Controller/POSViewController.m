@@ -114,10 +114,14 @@
     _createView.aTableView.delegate = _purchaseAdapter;
     _createView.aTableView.dataSource = _purchaseAdapter;
     _createView.aCollectionView.backgroundColor = [UIColor clearColor];
+    /*
+     設定Delegate
+     */
+    _createView.nameField.delegate = _createView;
+    _createView.telField.delegate = _createView;
+    _createView.unitField.delegate = _createView;
     
     [self.view addSubview:_createView];
-    
-    
     
     
     [self.view bringSubviewToFront:_announceView];

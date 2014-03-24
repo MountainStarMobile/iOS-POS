@@ -7,6 +7,19 @@
 //
 
 #import "CreateView.h"
+#import "MathFunction.h"
+
+enum
+{
+    InputFieldTagName = 1,
+    InputFieldTagTel = 2,
+    InputFieldTagUnit = 3,
+};
+
+@interface CreateView()
+
+
+@end
 
 @implementation CreateView
 
@@ -42,6 +55,69 @@
 - (IBAction)chooseCategoryButtonPress:(UIButton*)sender
 {
     [self.delegate switchCategory:@"111"];
+}
+
+- (IBAction)chooseStaffButtonPress:(UIButton*)sender
+{
+    
+}
+
+- (IBAction)chooseBirthdayButtonPress:(UIButton*)sender
+{
+    
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSString *result = [[textField text] stringByReplacingCharactersInRange:range withString:string];
+    NSInteger tag = [textField tag];
+    switch (tag)
+    {
+        case InputFieldTagName:
+            self.customerName = result;
+            break;
+        case InputFieldTagTel:
+            self.customerTelephone = result;
+            break;
+        case InputFieldTagUnit:
+            if ([[MathFunction mathFunctionInstance] isPureInt:result])
+            {
+                self.units = result;
+            }
+            else
+            {
+                return NO;
+            }
+            break;
+    }
+    return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSInteger tag = [textField tag];
+    switch (tag)
+    {
+        case InputFieldTagName:
+            self.customerName = textField.text;
+            break;
+        case InputFieldTagTel:
+            self.customerTelephone = textField.text;
+            break;
+        case InputFieldTagUnit:
+            if ([[MathFunction mathFunctionInstance] isPureInt:textField.text])
+            {
+                self.units = textField.text;
+            }
+            break;
+    }
+    NSLog(@"result : %@", textField.text);
 }
 
 

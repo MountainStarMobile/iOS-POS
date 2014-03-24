@@ -48,4 +48,8 @@
 
 - (void)saveCustomer:(customer*)c;
 
+- (NSArray*)GetCustomerWithCustomerName:(NSString*)name;
+
+- (BOOL)existInCustomerOfCustomer:(customer*)c;
+
 @end

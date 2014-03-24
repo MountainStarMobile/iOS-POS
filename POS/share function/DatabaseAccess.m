@@ -130,6 +130,7 @@
 - (void)saveBulletin:(NSArray*)data
 {
     BOOL saveInd = YES;
+    [[DatabaseConnection GetPosDB] beginTransaction];
     for (bulletin *item in data)
     {
         NSString *str = [NSString stringWithFormat:@"insert into bulletin values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@','%@', '%@', '0')",item.bulletinNo, item.bulletinType, item.start, item.end, item.content, item.status, item.createUser, item.createTime, item.mdyUser, item.mdyTime];
@@ -137,8 +138,11 @@
         if (saveInd)
         {
             NSLog(@"%@ -> save error", item.bulletinNo);
+            [[DatabaseConnection GetPosDB] rollback];
+            return;
         }
     }
+    [[DatabaseConnection GetPosDB] commit];
 }
 
 - (NSArray*)GetRecentlyBulletins
@@ -187,7 +191,7 @@
 - (BOOL)saveBill:(bill*)b details:(NSArray*)data
 {
     BOOL saveInd = YES;
-    NSString *str = [NSString stringWithFormat:@"insert into staff values ('%@', '%@', '%@', '%@', '%@', '%@', %@, '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')", b.billNo, b.billDate, b.billTime, b.reverseDate, b.customerNo, b.staffNo, b.amount, b.remarks, b.invoiceNo, b.cashier, b.staffNo, b.createUser, b.createTime, b.mdyUser, b.mdyTime, b.syncStats];
+    NSString *str = [NSString stringWithFormat:@"insert into staff values ('%@', '%@', '%@', '%@', '%@', '%@', %@, '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')", b.billNo, b.billDate, b.billTime, b.reverseDate, b.customerNo, b.staffNo, b.amount, b.remarks, b.invoiceNo, b.cashier, b.staffNo, b.createUser, b.createTime, b.mdyUser, b.mdyTime, b.syncStatus];
     
     [[DatabaseConnection GetPosDB] beginTransaction];
     
@@ -232,9 +236,58 @@
 
 #pragma mark - customer
 
+- (BOOL)existInCustomerOfCustomer:(customer*)c
+{
+    int counter = 0;
+    NSString *str = [NSString stringWithFormat:@"select count(*) from customer where and customer_no = '%@'", c.customerNo];
+    FMResultSet *rs = [[DatabaseConnection GetPosDB] executeQuery:str];
+    if ([rs next])
+    {
+        counter = [rs intForColumnIndex:0];
+    }
+    if (counter > 0)
+        return YES;
+    return NO;
+}
+
+- (NSArray*)GetCustomerWithCustomerName:(NSString*)name
+{
+    NSMutableArray *array = [NSMutableArray array];
+    NSString *str = [NSString stringWithFormat:@"select * from customer where customer_name = '%@'", name];
+    FMResultSet *rs = [[DatabaseConnection GetPosDB] executeQuery:str];
+    while ([rs next])
+    {
+        @autoreleasepool {
+            customer *item = [customer new];
+            item.customerNo = [rs stringForColumn:@"customer_no"];
+            item.customerName = [rs stringForColumn:@"customer_name"];
+            item.customerBirthday = [rs stringForColumn:@"customer_birthday"];
+            item.customerTel = [rs stringForColumn:@"customer_tel"];
+            item.customerZip = [rs stringForColumn:@"customer_zip"];
+            item.customerAddr = [rs stringForColumn:@"customer_addr"];
+            item.remarks = [rs stringForColumn:@"remarks"];
+            item.lastBillDate = [rs stringForColumn:@"last_bill_date"];
+            item.status = [rs stringForColumn:@"status"];
+            item.createUser = [rs stringForColumn:@"create_date"];
+            item.createTime = [rs stringForColumn:@"create_time"];
+            item.mdyUser = [rs stringForColumn:@"mdy_user"];
+            item.mdyTime = [rs stringForColumn:@"mdy_time"];
+            item.syncStatus = [NSNumber numberWithInteger:[rs intForColumn:@"sync_status"]];
+            [array addObject:item];
+        }
+    }
+    return array;
+}
+
 - (void)saveCustomer:(customer*)c
 {
-    
+    BOOL saveInd = NO;
+    NSString *str = [NSString stringWithFormat:@"insert into bulletin values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@','%@', '%@', '%@', '%@', '%@', '%@')",c.customerNo, c.customerNo, c.customerBirthday, c.customerTel, c.customerZip, c.customerAddr, c.remarks, c.lastBillDate, c.status, c.createUser, c.createTime, c.mdyUser, c.mdyUser, c.syncStatus];
+    saveInd = [[DatabaseConnection GetPosDB] executeUpdate:str];
+    if (saveInd)
+    {
+        NSLog(@"%@ -> save error", c.customerName);
+    }
 }
 
 @end
