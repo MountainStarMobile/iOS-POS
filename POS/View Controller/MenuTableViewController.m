@@ -112,7 +112,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    [self.delegate menu:self didPickWithOption:indexPath.row contentView:_contentView];
+    [self.delegate menu:self didPickWithOption:indexPath.row];
 }
 
 #pragma mark -
