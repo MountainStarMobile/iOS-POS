@@ -57,6 +57,7 @@
 		7C4B0D7018B74B7D001C981B /* PathAndDirectoryFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D6F18B74B7D001C981B /* PathAndDirectoryFunction.m */; };
 		7C4B0D7318B74E56001C981B /* CustomerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D7218B74E56001C981B /* CustomerInfo.m */; };
 		7C4B0D7618B74EF4001C981B /* TradeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D7518B74EF4001C981B /* TradeInfo.m */; };
+		7CCBDA7D18BB2A8900CA5C9B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCBDA7C18BB2A8900CA5C9B /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		7C4B0D7218B74E56001C981B /* CustomerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerInfo.m; sourceTree = "<group>"; };
 		7C4B0D7418B74EF4001C981B /* TradeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeInfo.h; sourceTree = "<group>"; };
 		7C4B0D7518B74EF4001C981B /* TradeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeInfo.m; sourceTree = "<group>"; };
+		7CCBDA7C18BB2A8900CA5C9B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CCBDA7D18BB2A8900CA5C9B /* libsqlite3.0.dylib in Frameworks */,
 				0FD0235818B10053000F5993 /* CoreGraphics.framework in Frameworks */,
 				0FD0235A18B10053000F5993 /* UIKit.framework in Frameworks */,
 				0FD0235618B10053000F5993 /* Foundation.framework in Frameworks */,
@@ -199,6 +202,7 @@
 		0FD0235418B10053000F5993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7CCBDA7C18BB2A8900CA5C9B /* libsqlite3.0.dylib */,
 				0FD0235518B10053000F5993 /* Foundation.framework */,
 				0FD0235718B10053000F5993 /* CoreGraphics.framework */,
 				0FD0235918B10053000F5993 /* UIKit.framework */,
@@ -464,7 +468,7 @@
 				ORGANIZATIONNAME = "Good-idea Consulgint Inc.";
 				TargetAttributes = {
 					0FD0235118B10053000F5993 = {
-						DevelopmentTeam = K69G335CY9;
+						DevelopmentTeam = 5J6U55Z2KH;
 					};
 					0FD0236C18B10053000F5993 = {
 						TestTargetID = 0FD0235118B10053000F5993;
