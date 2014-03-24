@@ -17,6 +17,5 @@
 @property (nonatomic, strong) NSNumber *stock;
 @property (nonatomic, strong) NSNumber *count;
 @property (nonatomic, strong) NSString *imageUrl;
-@property (nonatomic, strong) NSString *url;
 
 @end

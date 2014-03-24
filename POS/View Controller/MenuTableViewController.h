@@ -19,16 +19,15 @@ typedef NS_ENUM(NSInteger, PMenuOption) {
     PMenuOptionCount = 6,
 };
 
-@class MenuTableViewController, RootView;
+@class MenuTableViewController;
 @protocol MenuOptionDelegate <NSObject>
 
-- (void)menu:(MenuTableViewController*)menu didPickWithOption:(PMenuOption)option contentView:(RootView*)view;
+- (void)menu:(MenuTableViewController*)menu didPickWithOption:(PMenuOption)option;
 
 @end
 
 @interface MenuTableViewController : REFrostedViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property id <MenuOptionDelegate> delegate;
-@property (nonatomic, strong) RootView *contentView;
 
 @end
