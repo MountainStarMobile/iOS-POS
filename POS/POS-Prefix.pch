@@ -14,3 +14,10 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+enum
+{
+    syncStatusNone = 0,
+    syncStatusNeed = 1,
+    syncStatussyncchronized = 2,
+};

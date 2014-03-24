@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString *billNo;
 @property (nonatomic, strong) NSString *billDate;
+@property (nonatomic, strong) NSString *billTime;
 @property (nonatomic, strong) NSString *reverseDate;
 @property (nonatomic, strong) NSString *customerNo;
 @property (nonatomic, strong) NSString *staffNo;
@@ -21,8 +22,10 @@
 @property (nonatomic, strong) NSString *cashier;
 @property (nonatomic, strong) NSString *status;
 @property (nonatomic, strong) NSString *createDate;
+@property (nonatomic, strong) NSString *createUser;
 @property (nonatomic, strong) NSString *createTime;
+@property (nonatomic, strong) NSString *mdyUser;
 @property (nonatomic, strong) NSString *mdyTime;
-@property (nonatomic, strong) NSNumber *syncStats;
+@property (nonatomic, strong) NSNumber *syncStatus;
 
 @end

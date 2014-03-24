@@ -10,8 +10,8 @@
 
 @interface bulletin : NSObject
 
-@property (nonatomic, strong) NSString *bulletin_no;
-@property (nonatomic, strong) NSString *bulletin_type;
+@property (nonatomic, strong) NSString *bulletinNo;
+@property (nonatomic, strong) NSString *bulletinType;
 @property (nonatomic, strong) NSString *start;
 @property (nonatomic, strong) NSString *end;
 @property (nonatomic, strong) NSString *content;
