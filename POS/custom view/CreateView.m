@@ -15,17 +15,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        
-    }
-    return self;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self)
-    {
-
     }
     return self;
 }
@@ -38,11 +27,5 @@
     // Drawing code
 }
 */
-
-- (IBAction)chooseCategoryButtonPress:(UIButton*)sender
-{
-    [self.delegate switchCategory:@"111"];
-}
-
 
 @end

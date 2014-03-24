@@ -8,19 +8,9 @@
 
 #import "RootView.h"
 
-@protocol CreateViewDelegate <NSObject>
-
-- (void)switchCategory:(NSString*)category;
-
-@end
 @interface CreateView : RootView
-
-@property (weak) id <CreateViewDelegate> delegate;
 
 @property (nonatomic, strong) IBOutlet UICollectionView *aCollectionView;
 
-@property (nonatomic, strong) IBOutlet UITableView *aTableView;
-
-- (IBAction)chooseCategoryButtonPress:(UIButton*)sender;
 
 @end

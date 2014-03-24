@@ -1,27 +1,27 @@
 //
-//  DatabaseConnection.m
-//  ExamKing
+//  DatabaseConnections.m
+//  POS
 //
-//  Created by sinss on 13/5/7.
-//  Copyright (c) 2013年 GoodIea. All rights reserved.
+//  Created by Leo Chang on 2/21/14.
+//  Copyright (c) 2014 Good-idea Consulgint Inc. All rights reserved.
 //
 
-#import "DatabaseConnection.h"
+#import "DatabaseConnections.h"
 #import "PathAndDirectoryFunction.h"
+#import "FMDatabase.h"
 
+@implementation DatabaseConnections
 
-@implementation DatabaseConnection
-
-+ (FMDatabase*)GetPosDB
++ (FMDatabase*)GetPOSDB
 {
     NSError *error = nil;
-    NSString *dbPath = [[PathAndDirectoryFunction pathAndDirectoryInstance] getDocumentPathForFileName:db_data andExtension:db_sqlite];
-    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:db_data ofType:db_sqlite];
+    NSString *dbPath = [[PathAndDirectoryFunction pathAndDirectoryInstance] getDocumentPathForFileName:db_pos andExtension:db_sqlite];
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:db_pos ofType:db_sqlite];
     if (![[NSFileManager defaultManager] fileExistsAtPath:dbPath])
     {
         if (![[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:dbPath error:&error])
         {
-            NSLog(@"faild to copy data.sqlite (%@)", error);
+            NSLog(@"faild to copy POS.sqlite (%@)", error);
         }
     }
     //create singleton object
@@ -38,6 +38,5 @@
     
     return db;
 }
-
 
 @end

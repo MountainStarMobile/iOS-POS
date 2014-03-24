@@ -16,7 +16,4 @@
 
 - (void)showMenu;
 
-- (IBAction)showMenuButtonPress:(id)sender;
-
-
 @end

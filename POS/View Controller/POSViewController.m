@@ -12,19 +12,16 @@
 #import "AnnouncementView.h"
 #import "AnnounceAdapter.h"
 #import "CreateView.h"
-#import "ProductAdapter.h"
-#import "PurchaseAdapter.h"
+#import "CreateAdapter.h"
 #import "productCell.h"
-#import "PurchaseCell.h"
 
-@interface POSViewController () <MenuOptionDelegate, AnnounceDelegate, CreateViewDelegate>
+@interface POSViewController () <MenuOptionDelegate, AnnounceDelegate>
 
 @property (readwrite, nonatomic) MenuTableViewController *menuViewController;
 @property (nonatomic, strong) AnnouncementView *announceView;
 @property (nonatomic, strong) AnnounceAdapter *dataAdapter;
 @property (nonatomic, strong) CreateView *createView;
-@property (nonatomic, strong) ProductAdapter *productAdapter;
-@property (nonatomic, strong) PurchaseAdapter *purchaseAdapter;
+@property (nonatomic, strong) CreateAdapter *createAdapter;
 
 - (void)createAllViews;
 
@@ -77,11 +74,6 @@
     [self.menuViewController presentFromViewController:self animated:YES completion:nil];
 }
 
-- (IBAction)showMenuButtonPress:(id)sender
-{
-    [self showMenu];
-}
-
 - (void)createAllViews
 {
     CGRect frame = CGRectMake(0, 81, 1024, 768 - 80);
@@ -104,22 +96,17 @@
     self.createView = [[[NSBundle mainBundle] loadNibNamed:@"CreateView" owner:self options:nil] objectAtIndex:0];
     self.createView.alpha = 0;
     self.createView.frame = frame;
-    self.createView.delegate = self;
     [_createView.aCollectionView registerNib:[UINib nibWithNibName:@"productCell" bundle:nil] forCellWithReuseIdentifier:createCellIdentifier];
-    [_createView.aTableView registerNib:[UINib nibWithNibName:@"PurchaseCell" bundle:nil] forCellReuseIdentifier:purchaseItemCellIdeitnfier];
-    self.productAdapter = [[ProductAdapter alloc] init];
-    self.purchaseAdapter = [[PurchaseAdapter alloc] init];
-    _createView.aCollectionView.delegate = _productAdapter;
-    _createView.aCollectionView.dataSource = _productAdapter;
-    _createView.aTableView.delegate = _purchaseAdapter;
-    _createView.aTableView.dataSource = _purchaseAdapter;
+    self.createAdapter = [[CreateAdapter alloc] init];
+    _createView.aCollectionView.delegate = _createAdapter;
+    _createView.aCollectionView.dataSource = _createAdapter;
     _createView.aCollectionView.backgroundColor = [UIColor clearColor];
     
     [self.view addSubview:_createView];
     
-    
-    
-    
+    /*
+     將公告頁面移至最上層
+     */
     [self.view bringSubviewToFront:_announceView];
 }
 
@@ -132,18 +119,20 @@
 
 #pragma mark - MenuOptionDelegate
 
-- (void)menu:(MenuTableViewController *)menu didPickWithOption:(PMenuOption)option
+- (void)menu:(MenuTableViewController *)menu didPickWithOption:(PMenuOption)option contentView:(RootView *)view
 {
     switch (option)
     {
         case PMenuOptionAnnounce:
+            [view hide];
+            
             [self.view bringSubviewToFront:_announceView];
-            [_createView hide];
             [_announceView performSelector:@selector(show) withObject:nil afterDelay:0.5];
             break;
         case PMenuOptionCreate:
+            [view hide];
+            
             [self.view bringSubviewToFront:_createView];
-            [_announceView hide];
             [_createView performSelector:@selector(show) withObject:nil afterDelay:0.5];
             break;
         default:
@@ -151,13 +140,6 @@
             break;
     }
     [menu dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark - CreateViewDelegate
-- (void)switchCategory:(NSString *)category
-{
-    _productAdapter.category = category;
-    [_createView.aCollectionView reloadData];
 }
 
 @end
