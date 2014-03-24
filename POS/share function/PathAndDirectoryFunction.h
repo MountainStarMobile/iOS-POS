@@ -17,24 +17,8 @@
 + (PathAndDirectoryFunction*)pathAndDirectoryInstance;
 
 - (NSString*)getDocumentDirectoryForComponent:(NSString*)comp;
-- (NSString*)getReportDriectoryInDocumentForCompoment:(NSString*)comp;
-- (NSString*)getReportPathInDocumentForCompoment:(NSString*)comp andFileName:(NSString*)file andExtension:(NSString*)ext;
-- (NSString*)getSavedataDriectoryInDocumentForCompoment:(NSString*)comp;
-- (NSString*)getSavedataPathInDocumentForComponent:(NSString*)comp andFileName:(NSString*)file andExtension:(NSString*)ext;
-- (NSString*)getInfoDriectoryInDocumentForComponent:(NSString*)comp;
-- (NSString*)getInfoPathInDocumentForComponent:(NSString*)comp andFileName:(NSString*)file andExtension:(NSString*)ext;
-
 - (NSString*)getDocumentPathForFileName:(NSString*)fileName andExtension:(NSString*)ext;
 - (NSString*)getTempPathForFileName:(NSString*)file andExtension:(NSString*)ext;
 - (NSString*)getCachePathForFileName:(NSString*)file andExtension:(NSString*)ext;
-- (NSString*)getProvisionDirectoryInCache;
-- (NSString*)getProvisionPathInCacheForFileName:(NSString*)file andExtension:(NSString*)ext;
-- (NSString*)getIntroDirectoryInCache;
-- (NSString*)getIntroPathInCacheForFileName:(NSString*)file andExtension:(NSString*)ext;
-- (NSString*)getDmDirectoryInCache;
-- (NSString*)getDmPathInCacheForFileName:(NSString*)file andExtension:(NSString*)ext;
-- (NSString*)getClassDirectoryInCache;
-- (NSString*)getClassPathInCacheForFileName:(NSString*)file andExtension:(NSString*)ext;
-- (NSString*)getCatalogDirectoryInCache;
-- (NSString*)getCatalogPathInCacheForFileName:(NSString*)file andExtension:(NSString*)ext;
+
 @end

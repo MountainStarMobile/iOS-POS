@@ -70,21 +70,7 @@
 		7C4B0D4718B49464001C981B /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4618B49464001C981B /* ProductItem.m */; };
 		7C4B0D4B18B497C0001C981B /* productCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4A18B497C0001C981B /* productCell.m */; };
 		7C4B0D4D18B497CD001C981B /* productCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B0D4C18B497CD001C981B /* productCell.xib */; };
-<<<<<<< HEAD
-		7C4B0D5418B6FDCD001C981B /* AccountItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5318B6FDCD001C981B /* AccountItem.m */; };
-		7C4B0D6318B73FA9001C981B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5718B73FA9001C981B /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C4B0D6418B73FA9001C981B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5918B73FA9001C981B /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C4B0D6518B73FA9001C981B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5B18B73FA9001C981B /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C4B0D6618B73FA9001C981B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5D18B73FA9001C981B /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C4B0D6718B73FA9001C981B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D5F18B73FA9001C981B /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C4B0D6818B73FA9001C981B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D6218B73FA9001C981B /* Toast+UIView.m */; };
-		7C4B0D6C18B742BB001C981B /* DatabaseConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D6B18B742BB001C981B /* DatabaseConnections.m */; };
-		7C4B0D7018B74B7D001C981B /* PathAndDirectoryFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D6F18B74B7D001C981B /* PathAndDirectoryFunction.m */; };
-		7C4B0D7318B74E56001C981B /* CustomerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D7218B74E56001C981B /* CustomerInfo.m */; };
-		7C4B0D7618B74EF4001C981B /* TradeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B0D7518B74EF4001C981B /* TradeInfo.m */; };
-		7CCBDA7D18BB2A8900CA5C9B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCBDA7C18BB2A8900CA5C9B /* libsqlite3.0.dylib */; };
-=======
->>>>>>> FETCH_HEAD
+		7CCD059018DFDF2400A7551B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCD058F18DFDF2400A7551B /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,32 +186,7 @@
 		7C4B0D4918B497C0001C981B /* productCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = productCell.h; sourceTree = "<group>"; };
 		7C4B0D4A18B497C0001C981B /* productCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = productCell.m; sourceTree = "<group>"; };
 		7C4B0D4C18B497CD001C981B /* productCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = productCell.xib; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		7C4B0D5218B6FDCD001C981B /* AccountItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountItem.h; sourceTree = "<group>"; };
-		7C4B0D5318B6FDCD001C981B /* AccountItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountItem.m; sourceTree = "<group>"; };
-		7C4B0D5618B73FA9001C981B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		7C4B0D5718B73FA9001C981B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		7C4B0D5818B73FA9001C981B /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		7C4B0D5918B73FA9001C981B /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		7C4B0D5A18B73FA9001C981B /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		7C4B0D5B18B73FA9001C981B /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		7C4B0D5C18B73FA9001C981B /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		7C4B0D5D18B73FA9001C981B /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		7C4B0D5E18B73FA9001C981B /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		7C4B0D5F18B73FA9001C981B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		7C4B0D6118B73FA9001C981B /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
-		7C4B0D6218B73FA9001C981B /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
-		7C4B0D6A18B742BB001C981B /* DatabaseConnections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseConnections.h; sourceTree = "<group>"; };
-		7C4B0D6B18B742BB001C981B /* DatabaseConnections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseConnections.m; sourceTree = "<group>"; };
-		7C4B0D6E18B74B7D001C981B /* PathAndDirectoryFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathAndDirectoryFunction.h; sourceTree = "<group>"; };
-		7C4B0D6F18B74B7D001C981B /* PathAndDirectoryFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathAndDirectoryFunction.m; sourceTree = "<group>"; };
-		7C4B0D7118B74E56001C981B /* CustomerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerInfo.h; sourceTree = "<group>"; };
-		7C4B0D7218B74E56001C981B /* CustomerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerInfo.m; sourceTree = "<group>"; };
-		7C4B0D7418B74EF4001C981B /* TradeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeInfo.h; sourceTree = "<group>"; };
-		7C4B0D7518B74EF4001C981B /* TradeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeInfo.m; sourceTree = "<group>"; };
-		7CCBDA7C18BB2A8900CA5C9B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-=======
->>>>>>> FETCH_HEAD
+		7CCD058F18DFDF2400A7551B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,7 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CCBDA7D18BB2A8900CA5C9B /* libsqlite3.0.dylib in Frameworks */,
+				7CCD059018DFDF2400A7551B /* libsqlite3.0.dylib in Frameworks */,
 				0FD0235818B10053000F5993 /* CoreGraphics.framework in Frameworks */,
 				0FD0235A18B10053000F5993 /* UIKit.framework in Frameworks */,
 				0FD0235618B10053000F5993 /* Foundation.framework in Frameworks */,
@@ -317,7 +278,7 @@
 		0FD0235418B10053000F5993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7CCBDA7C18BB2A8900CA5C9B /* libsqlite3.0.dylib */,
+				7CCD058F18DFDF2400A7551B /* libsqlite3.0.dylib */,
 				0FD0235518B10053000F5993 /* Foundation.framework */,
 				0FD0235718B10053000F5993 /* CoreGraphics.framework */,
 				0FD0235918B10053000F5993 /* UIKit.framework */,
@@ -558,7 +519,7 @@
 		0FD0234A18B10053000F5993 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Good-idea Consulgint Inc.";
 				TargetAttributes = {
 					0FD0235118B10053000F5993 = {
@@ -710,7 +671,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -750,7 +710,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -813,7 +772,6 @@
 		0FD0238218B10053000F5993 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/POS.app/POS";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -836,7 +794,6 @@
 		0FD0238318B10053000F5993 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/POS.app/POS";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
