@@ -14,6 +14,7 @@
 #import "CreateView.h"
 #import "ProductAdapter.h"
 #import "PurchaseAdapter.h"
+#import "BillAdapter.h"
 #import "productCell.h"
 #import "PurchaseCell.h"
 
@@ -23,8 +24,16 @@
 @property (nonatomic, strong) AnnouncementView *announceView;
 @property (nonatomic, strong) AnnounceAdapter *dataAdapter;
 @property (nonatomic, strong) CreateView *createView;
+@property (nonatomic, strong) CreateView *modifyView;
+@property (nonatomic, strong) CreateView *queryView;
+@property (nonatomic, strong) CreateView *commitView;
 @property (nonatomic, strong) ProductAdapter *productAdapter;
 @property (nonatomic, strong) PurchaseAdapter *purchaseAdapter;
+@property (nonatomic, strong) BillAdapter *billAdapter;
+@property (nonatomic, strong) BillAdapter *queryAdapter;
+@property (nonatomic, strong) BillAdapter *commitAdapter;
+
+@property (weak) RootView *baseView;
 
 - (void)createAllViews;
 
@@ -104,26 +113,100 @@
     self.createView = [[[NSBundle mainBundle] loadNibNamed:@"CreateView" owner:self options:nil] objectAtIndex:0];
     self.createView.alpha = 0;
     self.createView.frame = frame;
+    self.createView.type = MenuTypeCreate;
     self.createView.delegate = self;
-    [_createView.aCollectionView registerNib:[UINib nibWithNibName:@"productCell" bundle:nil] forCellWithReuseIdentifier:createCellIdentifier];
-    [_createView.aTableView registerNib:[UINib nibWithNibName:@"PurchaseCell" bundle:nil] forCellReuseIdentifier:purchaseItemCellIdeitnfier];
+    [self.createView.aCollectionView registerNib:[UINib nibWithNibName:@"productCell" bundle:nil] forCellWithReuseIdentifier:createCellIdentifier];
+    [self.createView.aTableView registerNib:[UINib nibWithNibName:@"PurchaseCell" bundle:nil] forCellReuseIdentifier:purchaseItemCellIdeitnfier];
     self.productAdapter = [[ProductAdapter alloc] init];
     self.purchaseAdapter = [[PurchaseAdapter alloc] init];
-    _createView.aCollectionView.delegate = _productAdapter;
-    _createView.aCollectionView.dataSource = _productAdapter;
-    _createView.aTableView.delegate = _purchaseAdapter;
-    _createView.aTableView.dataSource = _purchaseAdapter;
-    _createView.aCollectionView.backgroundColor = [UIColor clearColor];
+    self.createView.aCollectionView.delegate = _productAdapter;
+    self.createView.aCollectionView.dataSource = _productAdapter;
+    self.createView.aTableView.delegate = _purchaseAdapter;
+    self.createView.aTableView.dataSource = _purchaseAdapter;
+    self.createView.aCollectionView.backgroundColor = [UIColor clearColor];
     /*
      設定Delegate
      */
-    _createView.nameField.delegate = _createView;
-    _createView.telField.delegate = _createView;
-    _createView.unitField.delegate = _createView;
-    
+    self.createView.nameField.delegate = _createView;
+    self.createView.telField.delegate = _createView;
+    self.createView.unitField.delegate = _createView;
     [self.view addSubview:_createView];
     
+    /*
+     修改畫面
+     */
+    self.modifyView = [[[NSBundle mainBundle] loadNibNamed:@"CreateView" owner:self options:nil] objectAtIndex:0];
+    self.modifyView.alpha = 0;
+    self.modifyView.frame = frame;
+    self.modifyView.type = MenuTypeModify;
+    self.modifyView.delegate = self;
+    [self.modifyView.aCollectionView registerNib:[UINib nibWithNibName:@"productCell" bundle:nil] forCellWithReuseIdentifier:createCellIdentifier];
+    [self.modifyView.aTableView registerNib:[UINib nibWithNibName:@"BillCell" bundle:nil] forCellReuseIdentifier:billCellIdentifier];
+    self.billAdapter = [[BillAdapter alloc] init];
+    self.modifyView.aCollectionView.delegate = _productAdapter;
+    self.modifyView.aCollectionView.dataSource = _productAdapter;
+    self.modifyView.aTableView.delegate = _billAdapter;
+    self.modifyView.aTableView.dataSource = _billAdapter;
+    self.modifyView.aCollectionView.backgroundColor = [UIColor clearColor];
+    /*
+     設定Delegate
+     */
+    self.modifyView.nameField.delegate = _modifyView;
+    self.modifyView.telField.delegate = _modifyView;
+    self.modifyView.unitField.delegate = _modifyView;
+    [self.view addSubview:_modifyView];
+    /*
+     查詢畫面
+     */
+    /*
+     修改畫面
+     */
+    self.queryView = [[[NSBundle mainBundle] loadNibNamed:@"CreateView" owner:self options:nil] objectAtIndex:0];
+    self.queryView.alpha = 0;
+    self.queryView.frame = frame;
+    self.queryView.type = MenuTypeQuery;
+    self.queryView.delegate = self;
+    [self.queryView.aCollectionView registerNib:[UINib nibWithNibName:@"productCell" bundle:nil] forCellWithReuseIdentifier:createCellIdentifier];
+    [self.queryView.aTableView registerNib:[UINib nibWithNibName:@"BillCell" bundle:nil] forCellReuseIdentifier:billCellIdentifier];
+    self.queryAdapter = [[BillAdapter alloc] init];
+    self.queryView.aCollectionView.delegate = _productAdapter;
+    self.queryView.aCollectionView.dataSource = _productAdapter;
+    self.queryView.aTableView.delegate = _queryAdapter;
+    self.queryView.aTableView.dataSource = _queryAdapter;
+    self.queryView.aCollectionView.backgroundColor = [UIColor clearColor];
+    /*
+     設定Delegate
+     */
+    self.queryView.nameField.delegate = _queryView;
+    self.queryView.telField.delegate = _queryView;
+    self.queryView.unitField.delegate = _queryView;
+    [self.view addSubview:_queryView];
+    /*
+     結帳畫面
+     */
+    self.commitView = [[[NSBundle mainBundle] loadNibNamed:@"CreateView" owner:self options:nil] objectAtIndex:0];
+    self.commitView.alpha = 0;
+    self.commitView.frame = frame;
+    self.commitView.type = MenuTypeCommit;
+    self.commitView.delegate = self;
+    [self.commitView.aCollectionView registerNib:[UINib nibWithNibName:@"productCell" bundle:nil] forCellWithReuseIdentifier:createCellIdentifier];
+    [self.commitView.aTableView registerNib:[UINib nibWithNibName:@"BillCell" bundle:nil] forCellReuseIdentifier:billCellIdentifier];
+    self.commitAdapter = [[BillAdapter alloc] init];
+    self.commitView.aCollectionView.delegate = _productAdapter;
+    self.commitView.aCollectionView.dataSource = _productAdapter;
+    self.commitView.aTableView.delegate = _commitAdapter;
+    self.commitView.aTableView.dataSource = _commitAdapter;
+    self.commitView.aCollectionView.backgroundColor = [UIColor clearColor];
+    /*
+     設定Delegate
+     */
+    self.commitView.nameField.delegate = _commitView;
+    self.commitView.telField.delegate = _commitView;
+    self.commitView.unitField.delegate = _commitView;
+    [self.view addSubview:_commitView];
+
     
+    self.baseView = _announceView;
     [self.view bringSubviewToFront:_announceView];
 }
 
@@ -142,13 +225,33 @@
     {
         case PMenuOptionAnnounce:
             [self.view bringSubviewToFront:_announceView];
-            [_createView hide];
+            [_baseView hide];
             [_announceView performSelector:@selector(show) withObject:nil afterDelay:0.5];
+            self.baseView = _announceView;
             break;
         case PMenuOptionCreate:
             [self.view bringSubviewToFront:_createView];
-            [_announceView hide];
+            [_baseView hide];
             [_createView performSelector:@selector(show) withObject:nil afterDelay:0.5];
+            self.baseView = _createView;
+            break;
+        case PMenuOptionModify:
+            [self.view bringSubviewToFront:_modifyView];
+            [_baseView hide];
+            [_modifyView performSelector:@selector(show) withObject:nil afterDelay:0.5];
+            self.baseView = _modifyView;
+            break;
+        case PMenuOptionSubTotal:
+            [self.view bringSubviewToFront:_commitView];
+            [_baseView hide];
+            [_commitView performSelector:@selector(show) withObject:nil afterDelay:0.5];
+            self.baseView = _commitView;
+            break;
+        case PMenuOptionQuery:
+            [self.view bringSubviewToFront:_queryView];
+            [_baseView hide];
+            [_queryView performSelector:@selector(show) withObject:nil afterDelay:0.5];
+            self.baseView = _queryView;
             break;
         default:
             

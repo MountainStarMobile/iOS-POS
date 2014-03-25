@@ -132,23 +132,35 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOr-0W-TbC">
-                    <rect key="frame" x="580" y="114" width="122" height="30"/>
+                    <rect key="frame" x="894" y="111" width="122" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="確定"/>
                 </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2014-03-26" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gew-Pd-MxM">
+                    <rect key="frame" x="830" y="19" width="174" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <connections>
                 <outlet property="aCollectionView" destination="QOE-pe-sx9" id="8ew-4S-UDD"/>
                 <outlet property="aTableView" destination="bsJ-16-ezy" id="eb2-vh-oZP"/>
+                <outlet property="actionButton" destination="DOr-0W-TbC" id="eXX-oG-HZm"/>
                 <outlet property="birthButton" destination="ovB-Hf-1YN" id="MyM-jj-SzT"/>
                 <outlet property="nameField" destination="oTI-nM-1p7" id="MUy-U6-QBb"/>
                 <outlet property="productLabel" destination="IOy-2o-xIL" id="mYV-wi-hox"/>
+                <outlet property="productTitle" destination="M4R-kL-KC6" id="7WH-1A-R3Z"/>
                 <outlet property="staffButton" destination="dCK-Se-9jd" id="MYg-xO-EqQ"/>
                 <outlet property="subTotal" destination="UN9-rM-PWf" id="K5f-Sj-UcO"/>
+                <outlet property="subTotalTitle" destination="OVD-lJ-dj2" id="cY5-Ci-0ij"/>
                 <outlet property="telField" destination="m5I-HN-WxD" id="xAi-8B-qNB"/>
+                <outlet property="todayLabel" destination="gew-Pd-MxM" id="Jf7-VT-07j"/>
                 <outlet property="unitField" destination="RmT-9F-gDX" id="3yP-s2-weX"/>
+                <outlet property="unitTitle" destination="Co4-hO-RcT" id="l9k-Uk-6Vo"/>
             </connections>
         </view>
     </objects>

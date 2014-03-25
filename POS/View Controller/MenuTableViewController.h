@@ -15,8 +15,7 @@ typedef NS_ENUM(NSInteger, PMenuOption) {
     PMenuOptionModify = 2,
     PMenuOptionSubTotal = 3,
     PMenuOptionQuery = 4,
-    PMenuOptionSetting = 5,
-    PMenuOptionCount = 6,
+    PMenuOptionCount = 5,
 };
 
 @class MenuTableViewController;

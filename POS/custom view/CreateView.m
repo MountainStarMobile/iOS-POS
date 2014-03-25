@@ -43,14 +43,44 @@ enum
     return self;
 }
 
-/*
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
+
 - (void)drawRect:(CGRect)rect
 {
-    // Drawing code
+    if (_type == MenuTypeCreate)
+    {
+        [self.actionButton setTitle:@"加入" forState:UIControlStateNormal];
+        [self hideUnUseControl:NO];
+    }
+    else if (_type == MenuTypeModify)
+    {
+        [self.actionButton setTitle:@"修改" forState:UIControlStateNormal];
+        [self hideUnUseControl:YES];
+    }
+    else if (_type == MenuTypeQuery)
+    {
+        [self.actionButton setTitle:@"查詢" forState:UIControlStateNormal];
+        [self hideUnUseControl:YES];
+    }
+    else if (_type == MenuTypeCommit)
+    {
+        [self.actionButton setTitle:@"查詢" forState:UIControlStateNormal];
+        [self hideUnUseControl:YES];
+    }
 }
-*/
+
+- (void)hideUnUseControl:(BOOL)value
+{
+    [self.productTitle setHidden:value];
+    [self.productLabel setHidden:value];
+    [self.unitTitle setHidden:value];
+    [self.unitField setHidden:value];
+    [self.subTotalTitle setHidden:value];
+    [self.subTotal setHidden:value];
+}
+
 
 - (IBAction)chooseCategoryButtonPress:(UIButton*)sender
 {

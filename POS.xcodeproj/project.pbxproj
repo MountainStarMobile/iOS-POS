@@ -18,6 +18,9 @@
 		0F56C75B18DF257000CD2B43 /* PathAndDirectoryFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C75A18DF257000CD2B43 /* PathAndDirectoryFunction.m */; };
 		0F56C75E18DF259400CD2B43 /* pos.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0F56C75D18DF259400CD2B43 /* pos.sqlite */; };
 		0F56C76118DF25F400CD2B43 /* DatabaseAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C76018DF25F400CD2B43 /* DatabaseAccess.m */; };
+		0F56C76418E1B70500CD2B43 /* BillCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C76318E1B70500CD2B43 /* BillCell.m */; };
+		0F56C76618E1B71600CD2B43 /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F56C76518E1B71600CD2B43 /* BillCell.xib */; };
+		0F56C76E18E1C18F00CD2B43 /* BillAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C76D18E1C18F00CD2B43 /* BillAdapter.m */; };
 		0F82ED1E18DEBE1600839CFE /* bulletin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F82ED1D18DEBE1600839CFE /* bulletin.m */; };
 		0F82ED2118DEBEAF00839CFE /* bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F82ED2018DEBEAF00839CFE /* bill.m */; };
 		0F82ED2418DEBF5A00839CFE /* billDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F82ED2318DEBF5A00839CFE /* billDetail.m */; };
@@ -105,6 +108,11 @@
 		0F56C75D18DF259400CD2B43 /* pos.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = pos.sqlite; sourceTree = "<group>"; };
 		0F56C75F18DF25F400CD2B43 /* DatabaseAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseAccess.h; sourceTree = "<group>"; };
 		0F56C76018DF25F400CD2B43 /* DatabaseAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseAccess.m; sourceTree = "<group>"; };
+		0F56C76218E1B70500CD2B43 /* BillCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillCell.h; sourceTree = "<group>"; };
+		0F56C76318E1B70500CD2B43 /* BillCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillCell.m; sourceTree = "<group>"; };
+		0F56C76518E1B71600CD2B43 /* BillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
+		0F56C76C18E1C18F00CD2B43 /* BillAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillAdapter.h; sourceTree = "<group>"; };
+		0F56C76D18E1C18F00CD2B43 /* BillAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillAdapter.m; sourceTree = "<group>"; };
 		0F82ED1C18DEBE1600839CFE /* bulletin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bulletin.h; sourceTree = "<group>"; };
 		0F82ED1D18DEBE1600839CFE /* bulletin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bulletin.m; sourceTree = "<group>"; };
 		0F82ED1F18DEBEAF00839CFE /* bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bill.h; sourceTree = "<group>"; };
@@ -391,6 +399,9 @@
 				0F82ED4818DECD3000839CFE /* PurchaseCell.h */,
 				0F82ED4918DECD3000839CFE /* PurchaseCell.m */,
 				0F82ED4A18DECD3000839CFE /* PurchaseCell.xib */,
+				0F56C76218E1B70500CD2B43 /* BillCell.h */,
+				0F56C76318E1B70500CD2B43 /* BillCell.m */,
+				0F56C76518E1B71600CD2B43 /* BillCell.xib */,
 			);
 			path = "custom cell";
 			sourceTree = "<group>";
@@ -446,6 +457,8 @@
 				0F82ED4318DEC89400839CFE /* ProductAdapter.m */,
 				0F82ED4518DEC91100839CFE /* PurchaseAdapter.h */,
 				0F82ED4618DEC91100839CFE /* PurchaseAdapter.m */,
+				0F56C76C18E1C18F00CD2B43 /* BillAdapter.h */,
+				0F56C76D18E1C18F00CD2B43 /* BillAdapter.m */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -568,6 +581,7 @@
 				0F82ED3E18DEC45E00839CFE /* navigate-right-icon.png in Resources */,
 				0FD023CB18B25305000F5993 /* logo.png in Resources */,
 				0FD0239A18B106BC000F5993 /* inputFieldCell.xib in Resources */,
+				0F56C76618E1B71600CD2B43 /* BillCell.xib in Resources */,
 				0FD023A218B10DF7000F5993 /* LogoView.xib in Resources */,
 				0FD023A518B10E61000F5993 /* title_logo.png in Resources */,
 				7C4B0D4D18B497CD001C981B /* productCell.xib in Resources */,
@@ -615,6 +629,7 @@
 				0F82ED4418DEC89400839CFE /* ProductAdapter.m in Sources */,
 				0F82ED4B18DECD3000839CFE /* PurchaseCell.m in Sources */,
 				7C4B0D4B18B497C0001C981B /* productCell.m in Sources */,
+				0F56C76418E1B70500CD2B43 /* BillCell.m in Sources */,
 				0FD023C818B12606000F5993 /* UIImage+REFrostedViewController.m in Sources */,
 				0FD023CF18B39955000F5993 /* AnnouncementView.m in Sources */,
 				0F56C74B18DF233800CD2B43 /* FMDatabaseAdditions.m in Sources */,
@@ -626,6 +641,7 @@
 				0FD023BF18B11ED0000F5993 /* MenuTableViewController.m in Sources */,
 				0F82ED2718DEBFD600839CFE /* category.m in Sources */,
 				0FD0239918B106BC000F5993 /* inputFieldCell.m in Sources */,
+				0F56C76E18E1C18F00CD2B43 /* BillAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

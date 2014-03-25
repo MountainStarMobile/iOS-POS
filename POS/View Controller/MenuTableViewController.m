@@ -145,7 +145,7 @@
     
     if (indexPath.section == 0)
     {
-        NSArray *titles = @[@"公告", @"開單", @"改單", @"結帳", @"查詢", @"設定"];
+        NSArray *titles = @[@"公告", @"開單", @"改單", @"結帳", @"查詢"];
         //NSArray *images = @[@"left_simulation", @"left_favorite", @"left_examLog", @"left_licenseStore", @"", @"",];
         cell.textLabel.text = titles[indexPath.row];
         //[cell.imageView setImage:[UIImage imageNamed:images[indexPath.row]]];
